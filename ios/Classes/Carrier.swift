@@ -49,15 +49,14 @@ final public class Carrier {
             }
         }
         
-        if #available(iOS 12.0, *) {
-            self.carriers = networkInfo.serviceSubscriberCellularProviders ?? [:]
-            
-        } else {
+//        if #available(iOS 12.0, *) {
+//            self.carriers = networkInfo.serviceSubscriberCellularProviders ?? [:]
+//
+//        } else {
             if(networkInfo.subscriberCellularProvider != nil){
                 carriers = ["0": networkInfo.subscriberCellularProvider!]
             }
-            
-        }
+//        }
         
         
     }
